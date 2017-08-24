@@ -1,0 +1,6 @@
+while(index1 < end1 && index2 < end2) {
+  if(arr[index1] <= arr[index2]) combined[mainindex++] = arr[index1++];
+  else combined[mainindex++] = arr[index2++];
+}
+while(index1 < end1) combined[mainindex++] = arr[index1++];
+while(index2 < end2) combined[mainindex++] = arr[index2++];
