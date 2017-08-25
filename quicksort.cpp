@@ -4,12 +4,11 @@ void quicksort(int arr[], int low, int high) {
 	if(low >= high) return;
 	//elements on or before wall are less than pivot (a value, not an index).
 	int walltill = low - 1, pivot = arr[high];
-	steps += high - low + 1;
 	for(int i = low; i <= high - 1; i++) {
 		//if current element <= pivot, move wall 1 step ahead and swap element at wall with current element.
 		if(arr[i] <= pivot) {
+			swap(arr[walltill + 1], arr[i]);
 			walltill++;
-			swap(arr[walltill], arr[i]);
 		}
 	}
 	//finally put pivot in its correct position as in the final sorted array.
